@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}Django Auth Tutorial{% endblock %}</title>
+</head>
+<body background="{% static 'images/group-3.svg' %}">
+
+  <main>
+    {% block content %}
+    {% endblock %}
+
+  </main>
+</body>
+</html>

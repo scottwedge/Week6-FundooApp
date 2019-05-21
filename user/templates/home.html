@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+  Hi {{ user.username }}!
+  <p><a style="font-size:200%;" href="{% url 'logout' %}">logout</a></p>
+  <p><a style="font-size:200%;" href="{% url 'password_reset' %}">reset password</a></p>
+<p><a style="font-size:200%;" href="{% url 'signup' %}">Signup</a></p>
+{% else %}
+  <p style="font-size:200%;" >Welcome To The Login Page!</p>
+  <a style="font-size:200%;" href="{% url 'login' %}">login</a>
+
+{% endif %}
+{% endblock %}
